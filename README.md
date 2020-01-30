@@ -33,7 +33,7 @@ roslaunch ros_ledstrip ros_ledstrip.launch
 
 ## 終了する
 
-満足したら`ctrl+z`で終了し、そしてGPIOの後始末をしてください
+満足したら`ctrl+c`で終了し、そしてGPIOの後始末をしてください
 
 ```
 sudo sh -c "echo 18 > /sys/class/gpio/unexport"
