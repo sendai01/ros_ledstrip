@@ -1,0 +1,4 @@
+<launch>
+	<node pkg="ros_ledstrip" name="led_clock" type="led_clock.py" required="true" />
+	<node pkg="ros_ledstrip" name="led_control" type="led_control.py" required="true" />
+</launch>
