@@ -1,7 +1,9 @@
 # ros_ledstrip
-Raspberry Pi上のROSで動くLEDテープを光らせるパッケージです。
+Raspberry Pi上のROSで動くパッケージで、フルカラーLEDを光らせることができます。
 17時から23時まで点灯します。
-## 導入
+## 導入&実行
+まずLEDの一番長い足を3.3Vに、他をGPIO18、23、24に接続してください。
+
 GPIOを使う準備をします。
 
 ```
@@ -25,4 +27,16 @@ git clone https://github.com/sendai01/ros_ledstrip.git
 cd ../
 catkin_make -j 1
 roslaunch ros_ledstrip ros_ledstrip.launch
+```
+
+コードをいじると色を変えたり、点灯時刻を変えることもできます😇
+
+## 終了する
+
+満足したら`ctrl+z`で終了し、そしてGPIOの後始末をしてください
+
+```
+sudo sh -c "echo 18 > /sys/class/gpio/unexport"
+sudo sh -c "echo 23 > /sys/class/gpio/unexport"
+sudo sh -c "echo 24 > /sys/class/gpio/unexport"
 ```
