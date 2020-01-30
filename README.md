@@ -18,6 +18,7 @@ sudo sh -c "echo out > /sys/class/gpio/gpio24/export"
 ワークスペースでクローンします。
 
 ```
+cd /<ワークスペース>/src
 git clone https://github.com/sendai01/ros_ledstrip.git
 ```
 
